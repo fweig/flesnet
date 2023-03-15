@@ -40,7 +40,7 @@ if(INCLUDE_ZMQ)
     GIT_REPOSITORY "https://github.com/zeromq/libzmq.git"
     GIT_TAG "4097855ddaaa65ed7b5e8cb86d143842a594eebd" # v4.3.4
     GIT_CONFIG advice.detachedHead=false
-    PATCH_COMMAND patch -p1 -i "${CMAKE_SOURCE_DIR}/fix_gnutls_macosx_v4.3.4.patch"
+    PATCH_COMMAND patch -p1 -i "${CMAKE_CURRENT_SOURCE_DIR}/fix_gnutls_macosx_v4.3.4.patch"
     CMAKE_CACHE_ARGS
     -DCMAKE_SUPPRESS_DEVELOPER_WARNINGS:BOOL=TRUE
     -DWITH_LIBBSD:BOOL=FALSE
